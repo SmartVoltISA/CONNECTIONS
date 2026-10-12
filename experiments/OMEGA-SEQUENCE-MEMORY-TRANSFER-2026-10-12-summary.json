@@ -1,0 +1,49 @@
+{
+  "experiment": "Sequence-dependent memory and held-out behavior",
+  "date": "2026-10-12",
+  "execution": "local Python run twice; CSV and summary byte-identical",
+  "trials": 80,
+  "train_sequences_per_trial": 40,
+  "train_lengths": [
+    2,
+    6
+  ],
+  "heldout_sequences_per_trial": 50,
+  "heldout_lengths": [
+    7,
+    12
+  ],
+  "rows": 240,
+  "hidden_rule": "next_state = current_state XOR input",
+  "results": [
+    {
+      "mode": "stateless_baseline",
+      "mean_accuracy": 0.498086060870828,
+      "sd": 0.02325657940493916,
+      "min": 0.44306418219461696,
+      "max": 0.5443298969072164
+    },
+    {
+      "mode": "transition_learning",
+      "mean_accuracy": 1,
+      "sd": 0,
+      "min": 1,
+      "max": 1
+    },
+    {
+      "mode": "recurrent_state_model",
+      "mean_accuracy": 1,
+      "sd": 0,
+      "min": 1,
+      "max": 1
+    }
+  ],
+  "csv_sha256": "cb40159f147b8307b4cc43638d4dc9865c818fa26c4c8a00d289e74137268226",
+  "summary_sha256": "75e867370ef4fec0f5c7479d9a700752ac101193e4b155360448b7c52bf49407",
+  "limitations": [
+    "Toy two-state XOR rule",
+    "100% follows from observing all four transitions during training",
+    "Two learned variants use same transition table",
+    "Raw CSV local only"
+  ]
+}
