@@ -1,0 +1,43 @@
+{
+  "experiment": "Ω dual-contour architecture benchmark",
+  "status": "Executed JavaScript reference simulation in current session; Python reproduction script committed separately.",
+  "seed_policy": "trial seed = 20261013 + trial",
+  "design": {
+    "trials": 100,
+    "known_tasks": 8,
+    "novel_tasks": 4,
+    "rule": "deterministic four-entry binary lookup table per task",
+    "evaluation": "four evaluation queries per task; calibration costs four extra queries",
+    "fast_only": "known rules cached; unseen tasks use all-zero fallback",
+    "exploratory_only": "calibrates every task then evaluates",
+    "hybrid": "uses cache when available; otherwise calibrates, verifies and caches"
+  },
+  "summary": [
+    {
+      "mode": "fast_only",
+      "trials": 100,
+      "mean_accuracy": 0.8275,
+      "sd_accuracy": 0.0386490621,
+      "mean_query_cost": 48,
+      "mean_novel_rules_discovered": 0
+    },
+    {
+      "mode": "exploratory_only",
+      "trials": 100,
+      "mean_accuracy": 1,
+      "sd_accuracy": 0,
+      "mean_query_cost": 96,
+      "mean_novel_rules_discovered": 4
+    },
+    {
+      "mode": "hybrid",
+      "trials": 100,
+      "mean_accuracy": 1,
+      "sd_accuracy": 0,
+      "mean_query_cost": 64,
+      "mean_novel_rules_discovered": 4
+    }
+  ],
+  "rows": 300,
+  "interpretation": "Hybrid matched exploratory accuracy and used 33.3% fewer counted queries. The toy is deliberately easy after calibration and does not establish general reasoning or consciousness."
+}
