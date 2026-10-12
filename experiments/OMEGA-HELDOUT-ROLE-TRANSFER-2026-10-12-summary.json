@@ -1,0 +1,34 @@
+{
+  "experiment": "Held-out functional generalization under edge damage and node removal",
+  "date": "2026-10-12",
+  "execution": "Python run twice; CSV and JSON byte-identical",
+  "rows": 648,
+  "trials_per_configuration": 12,
+  "nodes": 60,
+  "initial_edges": 150,
+  "graph_families": [
+    "er",
+    "modular"
+  ],
+  "edge_damage": [
+    0.25,
+    0.45,
+    0.6
+  ],
+  "node_removal_fraction": [
+    0.05,
+    0.1,
+    0.2
+  ],
+  "training_tasks": 12,
+  "heldout_tasks": 12,
+  "csv_sha256": "d9cf839abcbd4ed1ee84ae17f8a8fa55e84169597d6e3251ffbcb22231bc157a",
+  "summary_sha256": "97ad52a71a5c52aad81af2ab352436387f17fdbe0541723866945ab34ea89f73",
+  "conclusion": "Task-aware role transfer equaled or exceeded random role transfer on held-out reachability across all 18 tested settings in this small synthetic sweep; not a universal law.",
+  "limitations": [
+    "Only 12 trials per configuration",
+    "Role transfer is a graph proxy, not semantic/internal-state transfer",
+    "Deleted task endpoints can remain as isolated IDs",
+    "Two graph families only"
+  ]
+}
