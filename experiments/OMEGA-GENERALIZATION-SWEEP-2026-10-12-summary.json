@@ -1,0 +1,43 @@
+{
+  "experiment": "Omega repair strategy generalization sweep",
+  "date": "2026-10-12",
+  "run_status": "completed_twice_byte_identical",
+  "rows": 1620,
+  "graph_families": [
+    "er",
+    "modular"
+  ],
+  "damage_fractions": [
+    0.25,
+    0.45,
+    0.6
+  ],
+  "repair_budgets": [
+    1,
+    2,
+    4
+  ],
+  "trials_per_configuration": 30,
+  "modes": [
+    "no_repair",
+    "random_bridge",
+    "task_aware"
+  ],
+  "training_pairs": 8,
+  "heldout_pairs": 8,
+  "secondary_damage_fraction": 0.1,
+  "nodes": 60,
+  "initial_edges": 150,
+  "raw_csv_sha256": "58e049473886a08f17498ed7e65a2a9eb1476fa8d0787a355131284d74d6c361",
+  "summary_json_sha256": "08b30e7a8f84b93d677a47e10fb05e3513a7b300c273a84bd18ab9cf9c3d1bad",
+  "conclusion": "Training advantage of task-aware repair does not reliably transfer to held-out tasks; no universal winner across this sweep.",
+  "heldout_delta_task_minus_random_after_range": [
+    -0.0458,
+    0.0583
+  ],
+  "heldout_delta_task_minus_random_second_damage_range": [
+    -0.025,
+    0.0625
+  ],
+  "raw_csv_committed": false
+}
