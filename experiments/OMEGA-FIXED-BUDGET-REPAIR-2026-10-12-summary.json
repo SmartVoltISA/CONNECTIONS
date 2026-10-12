@@ -1,0 +1,111 @@
+{
+  "experiment": "Ω-Stand fixed-budget repair and functional continuity",
+  "date": "2026-10-12",
+  "status": "REPRODUCED LOCALLY; RAW DATA NOT YET COMMITTED",
+  "parameters": {
+    "nodes": 60,
+    "initial_edges": 150,
+    "edge_damage_fraction": 0.45,
+    "repair_budget_edges": 2,
+    "second_damage_fraction": 0.1,
+    "trials": 200,
+    "seed_start": 20261012,
+    "task_pairs_per_trial": 8
+  },
+  "summary": {
+    "no_repair": {
+      "after_reach": {
+        "mean": 0.850625,
+        "sd": 0.1350332714,
+        "min": 0.375,
+        "max": 1
+      },
+      "second_reach": {
+        "mean": 0.785625,
+        "sd": 0.1486278385,
+        "min": 0.375,
+        "max": 1
+      },
+      "after_lcc": {
+        "mean": 0.9233333333,
+        "sd": 0.0389800519
+      },
+      "second_lcc": {
+        "mean": 0.8888333333,
+        "sd": 0.0483652194
+      },
+      "components_after_damage": {
+        "mean": 5.08,
+        "sd": 1.94
+      },
+      "edges_added": {
+        "mean": 0
+      }
+    },
+    "random_bridge": {
+      "after_reach": {
+        "mean": 0.914375,
+        "sd": 0.1156351347,
+        "min": 0.5,
+        "max": 1
+      },
+      "second_reach": {
+        "mean": 0.84625,
+        "sd": 0.1461538145,
+        "min": 0.5,
+        "max": 1
+      },
+      "after_lcc": {
+        "mean": 0.9595,
+        "sd": 0.0333545766
+      },
+      "second_lcc": {
+        "mean": 0.9229166667,
+        "sd": 0.0467094298
+      },
+      "edges_added": {
+        "mean": 1.88,
+        "sd": 0.4069397987
+      }
+    },
+    "task_aware": {
+      "after_reach": {
+        "mean": 0.981875,
+        "sd": 0.0536153838,
+        "min": 0.625,
+        "max": 1
+      },
+      "second_reach": {
+        "mean": 0.915,
+        "sd": 0.1051487042,
+        "min": 0.625,
+        "max": 1
+      },
+      "after_lcc": {
+        "mean": 0.9618333333,
+        "sd": 0.0312956333
+      },
+      "second_lcc": {
+        "mean": 0.9265833333,
+        "sd": 0.0445376713
+      },
+      "edges_added": {
+        "mean": 1.88,
+        "sd": 0.4069397987
+      }
+    }
+  },
+  "reproducibility": {
+    "independent_rerun": true,
+    "raw_csv_identical": true,
+    "raw_csv_sha256": "468edc1587415246ba62a2418a5cdd647007fd97a4af813e5d2bdbb43e1bc72d",
+    "summary_json_sha256": "ccc3f964d8441bfc4547507bc01fb158fcae2ec2fc8c0bba68449b255c1f5254",
+    "rows": 600,
+    "raw_csv_committed": false
+  },
+  "caveats": [
+    "Task-aware heuristic is optimized for the preselected task pairs; advantage is expected on that metric.",
+    "Only one graph family, one primary damage rate, one repair budget, and one second-damage rate were tested.",
+    "Not evidence for a universal Ω law or for emergence of new organizational levels."
+  ]
+}
