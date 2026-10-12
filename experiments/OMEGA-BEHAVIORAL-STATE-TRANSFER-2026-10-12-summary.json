@@ -1,0 +1,37 @@
+{
+  "experiment": "Behavioral state transfer under node removal",
+  "date": "2026-10-12",
+  "local_execution": "Run twice; CSV and JSON outputs byte-identical",
+  "rows": 3240,
+  "nodes": 48,
+  "initial_edges": 112,
+  "trials_per_configuration": 60,
+  "graph_families": [
+    "er",
+    "modular"
+  ],
+  "edge_loss": [
+    0.25,
+    0.5,
+    0.65
+  ],
+  "node_loss": [
+    0.05,
+    0.15,
+    0.25
+  ],
+  "state_alphabet_size": 4,
+  "heldout_inputs": [
+    2,
+    3
+  ],
+  "csv_sha256": "90b475b1e2f413d3f909099ecfa0e388ea68eb520155ece3bf708ff1e92b3b26",
+  "summary_sha256": "7240dabb720878e45348cf2004b3d04eaed6d39257f7ac1f396ec280fa8c6a1f",
+  "finding": "Rewiring improves reachability, but state-aware successor choice does not consistently outperform random choice on held-out behavior.",
+  "limitations": [
+    "Toy four-state XOR behavior",
+    "State inference noisy",
+    "Hashes identify local execution artifacts, not outputs from committed reproduction script",
+    "Raw CSV not committed"
+  ]
+}
