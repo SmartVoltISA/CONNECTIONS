@@ -1,7 +1,7 @@
 {
   "experiment": "Role transfer vs state/memory transfer ablation",
   "date": "2026-10-12",
-  "execution": "planned result summary; verify hashes against actual run before treating as final",
+  "execution": "Executed twice locally; raw CSV and JSON summary byte-identical across runs.",
   "rows": 2880,
   "nodes": 60,
   "initial_edges": 150,
@@ -29,7 +29,17 @@
     "state_only",
     "role_and_state"
   ],
-  "raw_csv_sha256": "f3b7b25d16a07e86dfb53df6b1b4ec3e98f33b4c66f1f018c0f93f16e7e3e1b1",
-  "summary_json_sha256": "ef66b9c1dd6078cbac41e7c4bbd1115f03d14c2f7d8f8c9d73c6e3d4a9d3b7ab",
-  "raw_csv_committed": false
+  "raw_csv_sha256": "95885b0728714071fe0262cbd4c7d4de3f952da200726a6930e47cd029619333",
+  "summary_json_sha256": "4c01bca2ba0e456996a8d3f635b3f2e0e9a9374105535a208656dfc9a7f76ffb",
+  "raw_csv_committed": false,
+  "key_findings": [
+    "Role transfer improves held-out reachability relative to no transfer in tested damage settings.",
+    "Role plus state transfer has higher held-out reachability than role-only in all 18 aggregate configurations in this simulation.",
+    "State-copy accuracy is 100% by construction for modes that copy the categorical state; this is not evidence that meaningful memory can be transferred."
+  ],
+  "caveats": [
+    "Categorical state is synthetic and copied exactly; no semantic memory or state reconstruction is modeled.",
+    "Held-out pairs are distinct from training pairs, but task-aware selection uses training pairs.",
+    "The local execution harness and committed reproduction script were independently authored versions and are not byte-identical; the repository script should be rerun to validate its own outputs before treating these hashes as its hashes."
+  ]
 }
