@@ -8,8 +8,8 @@ Python standard-library simulation completed twice. Both CSV and summary JSON ma
 - 12 training task pairs used by the role-transfer strategy; 12 separately sampled held-out pairs used for evaluation.
 - 25%, 45%, 60% edge loss; removal of 5%, 10%, 20% of nodes.
 - Strategies: no repair, random role transfer, task-aware role transfer.
-- CSV SHA-256: `d9cf839abcbd4ed1ee84ae17f8a8fa55e84169597d6e3251ffbcb22231bc157a`
-- Summary SHA-256: `97ad52a71a5c52aad81af2ab352436387f17fdbe0541723866945ab34ea89f73`
+- The execution-run CSV SHA-256 was `d9cf839abcbd4ed1ee84ae17f8a8fa55e84169597d6e3251ffbcb22231bc157a`; execution summary SHA-256 was `97ad52a71a5c52aad81af2ab352436387f17fdbe0541723866945ab34ea89f73`. These hashes identify the two local execution artifacts, not a repository-hosted raw CSV.
+- The committed reproduction script emits a compact output schema, so its CSV byte hash is not claimed to match the earlier local CSV byte-for-byte; the two local execution runs themselves were byte-identical.
 
 ## Held-out reachability after node removal and role transfer
 
