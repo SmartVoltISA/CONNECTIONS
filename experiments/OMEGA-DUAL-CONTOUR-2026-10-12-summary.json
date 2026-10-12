@@ -16,8 +16,8 @@
     {
       "mode": "fast_only",
       "trials": 100,
-      "mean_accuracy": 0.8275,
-      "sd_accuracy": 0.0386490621,
+      "mean_accuracy": 0.8275000000000001,
+      "sd_accuracy": 0.03864906208435077,
       "mean_query_cost": 48,
       "mean_novel_rules_discovered": 0
     },
@@ -39,5 +39,5 @@
     }
   ],
   "rows": 300,
-  "interpretation": "Hybrid matched exploratory accuracy and used 33.3% fewer counted queries. The toy is deliberately easy after calibration and does not establish general reasoning or consciousness."
+  "interpretation": "Hybrid matches exploratory accuracy while using 33.3% fewer counted queries in this toy. It does not establish general reasoning or consciousness."
 }
