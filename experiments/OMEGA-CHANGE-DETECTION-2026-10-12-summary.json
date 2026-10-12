@@ -1,0 +1,54 @@
+{
+  "experiment": "Ω change detection and memory ablation",
+  "status": "JavaScript reference simulation executed in this session; committed Python script not executed here.",
+  "seed_policy": "trial seed = 20261015 + trial",
+  "design": {
+    "trials": 500,
+    "rows": 1500,
+    "hidden_rules": "four-state affine transitions, 64 possible rules",
+    "training": "10–16 transitions with 10% noisy labels",
+    "test_steps": 160,
+    "rule_shift_after_step": 80,
+    "feedback_delay": 5,
+    "feedback_noise": 0.1
+  },
+  "summary": [
+    {
+      "mode": "fixed_shared",
+      "mean_accuracy": 0.8159625,
+      "mean_pre_shift_accuracy": 0.866025,
+      "mean_post_shift_accuracy": 0.7659,
+      "mean_fast_uses": 150.476,
+      "mean_exploration_calls": 9.524,
+      "detection_rate": 0,
+      "mean_detection_delay": null
+    },
+    {
+      "mode": "calibrated_shared",
+      "mean_accuracy": 0.345875,
+      "mean_pre_shift_accuracy": 0.43935,
+      "mean_post_shift_accuracy": 0.2524,
+      "mean_fast_uses": 21.714,
+      "mean_exploration_calls": 138.286,
+      "detection_rate": 0.99,
+      "mean_detection_delay": -49.14949495
+    },
+    {
+      "mode": "no_shared_memory",
+      "mean_accuracy": 0.49735,
+      "mean_pre_shift_accuracy": 0.749525,
+      "mean_post_shift_accuracy": 0.245175,
+      "mean_fast_uses": 89.864,
+      "mean_exploration_calls": 70.136,
+      "detection_rate": 0,
+      "mean_detection_delay": null
+    }
+  ],
+  "key_finding": "The confidence/change detector raised alarms in 99% of trials but on average about 49 steps before the actual shift; noisy initial feedback caused false alarms. Its accuracy was worse than fixed routing. This is a negative result for the current detector.",
+  "limitations": [
+    "Reference simulation is JavaScript, not execution of committed Python.",
+    "Synthetic finite task family.",
+    "The detector is an intentionally simple heuristic and is not validated.",
+    "No claims about emergence, general intelligence, or consciousness."
+  ]
+}
