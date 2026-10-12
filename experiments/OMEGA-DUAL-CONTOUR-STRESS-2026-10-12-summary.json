@@ -1,0 +1,62 @@
+{
+  "experiment": "Ω dual-contour stress benchmark",
+  "status": "Reference simulation executed in JavaScript in this session; Python script committed for reproduction, but not executed here.",
+  "seed_policy": "trial seed = 20261013 + trial",
+  "design": {
+    "trials": 300,
+    "known_rule_family_size": 64,
+    "training_observations": "6–10 transitions, 15% corrupted labels",
+    "test_steps": 100,
+    "rule_change_after_step": 50,
+    "feedback": "true next state revealed after each prediction; shared-memory hybrid stores feedback"
+  },
+  "summary": [
+    {
+      "mode": "fast_only",
+      "mean_accuracy": 0.2562333333,
+      "sd_accuracy": 0.1411458308,
+      "mean_pre_shift_accuracy": 0.4147333333,
+      "mean_post_shift_accuracy": 0.0977333333,
+      "mean_cache_hits": 42.72,
+      "mean_exploration_calls": 0,
+      "mean_abstentions": 57.28
+    },
+    {
+      "mode": "exploratory_only",
+      "mean_accuracy": 0.3494666667,
+      "sd_accuracy": 0.2238653961,
+      "mean_pre_shift_accuracy": 0.4655333333,
+      "mean_post_shift_accuracy": 0.2334,
+      "mean_cache_hits": 0,
+      "mean_exploration_calls": 100,
+      "mean_abstentions": 0
+    },
+    {
+      "mode": "hybrid_shared_memory",
+      "mean_accuracy": 0.8669,
+      "sd_accuracy": 0.0513035736,
+      "mean_pre_shift_accuracy": 0.9154666667,
+      "mean_post_shift_accuracy": 0.8183333333,
+      "mean_cache_hits": 90.72,
+      "mean_exploration_calls": 9.28,
+      "mean_abstentions": 0
+    },
+    {
+      "mode": "hybrid_no_shared_memory",
+      "mean_accuracy": 0.4476333333,
+      "sd_accuracy": 0.1714761369,
+      "mean_pre_shift_accuracy": 0.6516666667,
+      "mean_post_shift_accuracy": 0.2436,
+      "mean_cache_hits": 42.72,
+      "mean_exploration_calls": 57.28,
+      "mean_abstentions": 0
+    }
+  ],
+  "rows": 1200,
+  "limitations": [
+    "JS reference run; values are not claimed as output from the committed Python script.",
+    "Synthetic finite hypothesis family.",
+    "Strong online feedback assumption.",
+    "Does not establish emergence, general intelligence, or consciousness."
+  ]
+}
