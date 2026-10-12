@@ -1,7 +1,7 @@
 # Ω-Stand — Fixed-budget repair and functional continuity
 
 - Date: 2026-10-12
-- Status: **PILOT RESULT — SOURCE COMMITTED; RAW CSV GENERATED LOCALLY BUT NOT YET COMMITTED**
+- Status: **SOURCE COMMITTED; 200-TRIAL RUN REPRODUCED LOCALLY; AGGREGATE SUMMARY ARCHIVED**
 - Code: [omega_fixed_budget_repair.py](./omega_fixed_budget_repair.py)
 - Related prior record: [connectivity recovery pilot](./OMEGA-WHOLE-PARTS-CONNECTIVITY-PILOT-2026-10-11.md)
 
@@ -55,7 +55,7 @@ These intervals are descriptive paired t intervals, not a substitute for indepen
 
 ## Reproducibility status
 
-The Python standard-library script is committed. It generates per-trial CSV and aggregate JSON when run locally:
+The Python standard-library script is committed. It generates per-trial CSV and aggregate JSON when run locally. The run was repeated independently with the same seeds; the two raw CSV files were byte-identical (SHA-256 `468edc1587415246ba62a2418a5cdd647007fd97a4af813e5d2bdbb43e1bc72d`). Aggregate summary is archived in [OMEGA-FIXED-BUDGET-REPAIR-2026-10-12-summary.json](./OMEGA-FIXED-BUDGET-REPAIR-2026-10-12-summary.json).
 ```bash
 python experiments/omega_fixed_budget_repair.py --out omega-stand-results
 ```
