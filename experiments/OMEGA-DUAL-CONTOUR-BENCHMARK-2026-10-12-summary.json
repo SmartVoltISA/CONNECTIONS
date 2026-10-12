@@ -1,0 +1,53 @@
+{
+  "experiment": "Fast vs exploratory vs hybrid dual contour",
+  "environment": "4-state deterministic affine transition: next=(a*state+b*input+c) mod 4",
+  "hypothesis_class_size": 64,
+  "trials": 300,
+  "rows": 900,
+  "training_length": "5–9 transitions",
+  "test_length": 120,
+  "seed_range": [
+    20261012,
+    20261311
+  ],
+  "summary": [
+    {
+      "mode": "fast_cache",
+      "trials": 300,
+      "mean_accuracy": 0.4384722222222222,
+      "sd_accuracy": 0.23382038288099966,
+      "mean_exploration_calls": 0,
+      "mean_fast_cache_uses": 52.61666666666667,
+      "mean_abstentions": 67.38333333333333
+    },
+    {
+      "mode": "exploratory_model",
+      "trials": 300,
+      "mean_accuracy": 0.9328888888888889,
+      "sd_accuracy": 0.24637048088099966,
+      "mean_exploration_calls": 120,
+      "mean_fast_cache_uses": 0,
+      "mean_abstentions": 0
+    },
+    {
+      "mode": "hybrid",
+      "trials": 300,
+      "mean_accuracy": 0.9328888888888889,
+      "sd_accuracy": 0.24637048088099966,
+      "mean_exploration_calls": 15.016666666666667,
+      "mean_fast_cache_uses": 104.98333333333333,
+      "mean_abstentions": 0
+    }
+  ],
+  "limitations": [
+    "Synthetic finite hypothesis class only; not evidence of consciousness or general intelligence.",
+    "The exploratory model selects the first consistent candidate when data do not identify a unique rule.",
+    "The hybrid receives per-step feedback and caches only predictions that match the observed transition; this is an explicit online feedback advantage.",
+    "Fast-cache accuracy counts abstentions as incorrect; coverage is reported separately."
+  ],
+  "run_artifacts": {
+    "csv_sha256": "71dc8d9805ad16a2068a4d5fa98d5961173abc9b13635814f2e08bc487722f15",
+    "summary_json_sha256": "73933102d6cc8a0ad7c371d78931ec36295817d833c01d97ee1cbea5496274b6",
+    "raw_csv_committed": false
+  }
+}
