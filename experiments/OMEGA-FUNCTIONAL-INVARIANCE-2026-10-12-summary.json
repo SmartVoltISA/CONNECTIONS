@@ -1,0 +1,37 @@
+{
+  "experiment": "Functional invariance under edge turnover and node replacement",
+  "date": "2026-10-12",
+  "execution": "Python run twice; raw CSV and summary byte-identical",
+  "rows": 2700,
+  "nodes": 60,
+  "initial_edges": 150,
+  "trials_per_configuration": 50,
+  "graph_families": [
+    "er",
+    "modular"
+  ],
+  "damage_fractions": [
+    0.25,
+    0.45,
+    0.6
+  ],
+  "edge_turnover_fractions": [
+    0.1,
+    0.25,
+    0.4
+  ],
+  "functional_tasks_per_trial": 12,
+  "strategies": [
+    "no_repair",
+    "random_rewire",
+    "function_aware"
+  ],
+  "csv_sha256": "8c3468c4cdc48a8c70b6bb0dc9305718d26673872663c271441eeeccd77b057d",
+  "summary_sha256": "efae415bed8b1fbee85cba2181488c842c896b3416fcb7ff54cf41102f2c6001",
+  "key_finding": "Function-aware rewiring is most helpful under severe initial damage in these synthetic tests; results are mixed under moderate damage.",
+  "caveats": [
+    "Node replacement is approximated by rewiring incident edges, not semantic role transfer.",
+    "The function-aware strategy is evaluated on the same task pairs it optimizes.",
+    "Raw CSV not committed; script, report, and summary are committed."
+  ]
+}
