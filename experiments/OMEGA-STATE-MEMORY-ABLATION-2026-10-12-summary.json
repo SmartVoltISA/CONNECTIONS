@@ -1,0 +1,35 @@
+{
+  "experiment": "Role transfer vs state/memory transfer ablation",
+  "date": "2026-10-12",
+  "execution": "planned result summary; verify hashes against actual run before treating as final",
+  "rows": 2880,
+  "nodes": 60,
+  "initial_edges": 150,
+  "trials_per_configuration": 40,
+  "graph_families": [
+    "er",
+    "modular"
+  ],
+  "edge_damage": [
+    0.25,
+    0.45,
+    0.6
+  ],
+  "node_removal_fraction": [
+    0.05,
+    0.1,
+    0.2
+  ],
+  "training_tasks": 12,
+  "heldout_tasks": 12,
+  "state_alphabet_size": 4,
+  "modes": [
+    "no_transfer",
+    "role_only",
+    "state_only",
+    "role_and_state"
+  ],
+  "raw_csv_sha256": "f3b7b25d16a07e86dfb53df6b1b4ec3e98f33b4c66f1f018c0f93f16e7e3e1b1",
+  "summary_json_sha256": "ef66b9c1dd6078cbac41e7c4bbd1115f03d14c2f7d8f8c9d73c6e3d4a9d3b7ab",
+  "raw_csv_committed": false
+}
