@@ -1,0 +1,70 @@
+{
+  "experiment": "Ω delayed-feedback benchmark",
+  "status": "Executed JavaScript reference simulation in this session; committed Python reproduction script has not been executed here.",
+  "seed_policy": "trial seed = 20261014 + trial",
+  "design": {
+    "trials": 300,
+    "rows": 1200,
+    "hidden_rule": "next=(a*state+b*input+c) mod 4; 64 possible rules",
+    "training": "8–14 transitions, 10% corrupted labels",
+    "test_steps": 120,
+    "rule_shift_after_step": 60,
+    "feedback_delay": 5,
+    "feedback_noise": "10% corrupted labels",
+    "modes": [
+      "fast_only",
+      "exploratory_only",
+      "hybrid_fixed",
+      "hybrid_confidence"
+    ]
+  },
+  "summary": [
+    {
+      "mode": "fast_only",
+      "mean_accuracy": 0.3204444444,
+      "sd_accuracy": 0.1551241637,
+      "mean_pre_shift_accuracy": 0.5211111111,
+      "mean_post_shift_accuracy": 0.1197777778,
+      "mean_fast_uses": 61.22,
+      "mean_exploration_calls": 0,
+      "mean_abstentions": 58.78
+    },
+    {
+      "mode": "exploratory_only",
+      "mean_accuracy": 0.3583611111,
+      "sd_accuracy": 0.2305483583,
+      "mean_pre_shift_accuracy": 0.4627222222,
+      "mean_post_shift_accuracy": 0.254,
+      "mean_fast_uses": 0,
+      "mean_exploration_calls": 120,
+      "mean_abstentions": 0
+    },
+    {
+      "mode": "hybrid_fixed",
+      "mean_accuracy": 0.7853055556,
+      "sd_accuracy": 0.0594694846,
+      "mean_pre_shift_accuracy": 0.8491111111,
+      "mean_post_shift_accuracy": 0.7215,
+      "mean_fast_uses": 109.54,
+      "mean_exploration_calls": 10.46,
+      "mean_abstentions": 0
+    },
+    {
+      "mode": "hybrid_confidence",
+      "mean_accuracy": 0.6611388889,
+      "sd_accuracy": 0.0982167349,
+      "mean_pre_shift_accuracy": 0.8281666667,
+      "mean_post_shift_accuracy": 0.4941111111,
+      "mean_fast_uses": 82.0733333333,
+      "mean_exploration_calls": 37.9266666667,
+      "mean_abstentions": 0
+    }
+  ],
+  "interpretation": "In this JS reference run, fixed hybrid performed best overall. The confidence-gated hybrid underperformed, suggesting the current confidence heuristic is not calibrated well under noisy delayed feedback. Shared-memory hybrid benefits are not isolated cleanly in this run because the primary comparison here is routing strategy.",
+  "limitations": [
+    "Synthetic finite hypothesis class.",
+    "Environment provides delayed, noisy labels.",
+    "JS run is not execution of the committed Python implementation.",
+    "No claims about emergence, general intelligence, or consciousness."
+  ]
+}
